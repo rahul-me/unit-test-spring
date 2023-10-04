@@ -2,6 +2,9 @@ package com.rcode.unittesting.service;
 
 import com.rcode.unittesting.data.SomeDataService;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SomeBusinessService {
 	
 	private SomeDataService dataService;
@@ -11,13 +14,14 @@ public class SomeBusinessService {
 	}
 
 	public int calculateSum(int[] arr) {
-		int sum = 0;
-		
-		for(int a: arr) {
-			sum += a;
-		}
-//		System.out.println(sum);
-		return sum;
+//		int sum = 0;
+//
+//		for(int a: arr) {
+//			sum += a;
+//		}
+////		System.out.println(sum);
+//		return sum;
+		return Arrays.stream(arr).sum();
 	}
 	
 	public int calculateSumUsingDataService() {
